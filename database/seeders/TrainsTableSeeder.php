@@ -28,6 +28,8 @@ class TrainsTableSeeder extends Seeder
             $new_train->arrival_time = $faker->time();
             $new_train->train_code = $faker->regexify('[A-Z]{5}[0-4]{5}');
             $new_train->number_of_carriages = $faker->numberBetween(10, 20);
+            $new_train->in_time = $faker->numberBetween(0, 1);
+            $new_train->deleted = $faker->numberBetween(0, 1);
             $new_train->save();
         }
     }
